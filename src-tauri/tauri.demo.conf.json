@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schema.tauri.app/config/2",
+	"productName": "PortfolioCommandCenterDemo",
+	"build": {
+		"devUrl": "http://localhost:1421",
+		"beforeDevCommand": "pnpm demo:vite"
+	},
+	"app": {
+		"windows": [
+			{
+				"title": "Portfolio Command Center Demo",
+				"width": 1280,
+				"height": 820,
+				"minWidth": 900,
+				"minHeight": 600
+			}
+		]
+	}
+}

@@ -1,0 +1,5 @@
+# pnpm v11 reads build-script approvals here (not package.json). esbuild ships its
+# platform binary as an optional dependency and just needs its build approved so
+# `pnpm install` / `pnpm dev` don't bail on ERR_PNPM_IGNORED_BUILDS.
+allowBuilds:
+  esbuild: true

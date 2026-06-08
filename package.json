@@ -1,0 +1,39 @@
+{
+	"name": "portfolio-command-center",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"license": "MIT",
+	"packageManager": "pnpm@11.5.2",
+	"description": "Desktop command center over the GithubRepoAuditor portfolio truth snapshot (Tauri 2 + React).",
+	"scripts": {
+		"dev": "vite",
+		"demo:vite": "vite --port 1421 --strictPort",
+		"demo:desktop": "tauri dev --config src-tauri/tauri.demo.conf.json",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"tauri": "tauri",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"test:watch": "vitest"
+	},
+	"dependencies": {
+		"@tauri-apps/api": "^2.9.1",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"devDependencies": {
+		"@tauri-apps/cli": "^2.9.1",
+		"@testing-library/dom": "^10.4.1",
+		"@testing-library/jest-dom": "^6.9.1",
+		"@testing-library/react": "^16.3.2",
+		"@testing-library/user-event": "^14.6.1",
+		"@types/react": "^18.3.12",
+		"@types/react-dom": "^18.3.1",
+		"@vitejs/plugin-react": "^4.3.4",
+		"jsdom": "^29.1.1",
+		"typescript": "~5.6.3",
+		"vite": "^6.0.3",
+		"vitest": "^4.1.8"
+	}
+}

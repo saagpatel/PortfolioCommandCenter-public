@@ -1,0 +1,7 @@
+{
+	"$schema": "../gen/schemas/desktop-schema.json",
+	"identifier": "default",
+	"description": "Capabilities for the main window. v1 only invokes the app's own data-loading commands, so just core defaults are needed.",
+	"windows": ["main"],
+	"permissions": ["core:default"]
+}

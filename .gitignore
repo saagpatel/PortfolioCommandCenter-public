@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+.pnpm-store
+
+# build output
+dist
+dist-ssr
+
+# rust / tauri
+src-tauri/target
+src-tauri/gen
+
+# editor / os
+.DS_Store
+*.local
+.vscode/*
+!.vscode/extensions.json
