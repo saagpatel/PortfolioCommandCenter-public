@@ -725,11 +725,11 @@ mod tests {
     #[test]
     fn approve_passes_username_dir_and_id_as_positionals_not_spliced() {
         let id = "context-pr:Signal & Noise";
-        let v = proposal_cli_args(&ProposalAction::Approve, "saagpatel", "/tmp/out dir", id);
+        let v = proposal_cli_args(&ProposalAction::Approve, "testuser", "/tmp/out dir", id);
         assert_eq!(v.len(), 6);
         assert_eq!(v[0], "-lc");
         assert_eq!(v[2], "pcc");
-        assert_eq!(v[3], "saagpatel");
+        assert_eq!(v[3], "testuser");
         assert_eq!(v[4], "/tmp/out dir");
         assert_eq!(v[5], id);
         assert!(v[1].contains("--approve-proposal"));
@@ -738,7 +738,7 @@ mod tests {
         assert!(v[1].contains("\"$2\""));
         assert!(v[1].contains("\"$3\""));
         // The dynamic values must never appear in the script element itself.
-        assert!(!v[1].contains("saagpatel"));
+        assert!(!v[1].contains("testuser"));
         assert!(!v[1].contains("Signal & Noise"));
         assert!(!v[1].contains("/tmp/out dir"));
     }
@@ -796,8 +796,8 @@ mod tests {
     #[test]
     fn normalizes_scp_form() {
         assert_eq!(
-            github_web_url("git@github.com:saagpatel/PortfolioCommandCenter.git"),
-            Some("https://github.com/saagpatel/PortfolioCommandCenter".into())
+            github_web_url("git@github.com:example/PortfolioCommandCenter.git"),
+            Some("https://github.com/example/PortfolioCommandCenter".into())
         );
     }
 
